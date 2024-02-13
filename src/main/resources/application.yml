@@ -1,0 +1,29 @@
+server:
+  port: 8014
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3020/vivalahm
+    username: vivalahm
+    password: backend1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  ## JPA ??
+  jpa:
+    hibernate:
+      ddl-auto: none       # DB ??? ?? (none, create, create-drop, update, validate)
+      properties:
+        hibernate:
+          auto_quote_keyword: false
+          globally_quoted_identifiers: false
+          format_sql: true  # ?? ?? ?? (??)
+          show_sql: true   # ?? ?? ??
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
